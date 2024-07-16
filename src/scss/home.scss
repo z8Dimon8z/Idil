@@ -10,14 +10,15 @@
   background-repeat: no-repeat;
   background-color: rgb(255, 245, 244);
   background-position: top right;
+
   &__container {}
 
   /* .hero__wrapp */
 
   &__wrapp {
-      @media (max-width: em(1440)){
-   background-color: rgba(255, 245, 244, 0.5);   
-  }
+    @media (max-width: em(1440)) {
+      background-color: rgba(255, 245, 244, 0.5);
+    }
   }
 
   /* .hero__title */
@@ -60,13 +61,13 @@
     color: rgb(22, 21, 22);
     margin-bottom: 40px;
     @include adaptiveValue("margin-bottom", 40, 20);
-font-family: Source Serif Pro;
-font-size: 40px;
-@include adaptiveValue("font-size", 40, 24);
-font-weight: 400;
-line-height: 50px;
-letter-spacing: 0%;
-text-align: left;
+    font-family: Source Serif Pro;
+    font-size: 40px;
+    @include adaptiveValue("font-size", 40, 24);
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
   }
 
   /* .hero__btn */
@@ -87,18 +88,19 @@ text-align: left;
     background-color: rgb(255, 215, 218);
   }
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 140px;
-    @media (max-width: em(675)){
-       flex-direction: column;
-       height: 100%;
-       gap: 24px;
-       padding-top: 15px;
-       padding-bottom: 15px;
-       font-size: 16px; 
+
+    @media (max-width: em(675)) {
+      flex-direction: column;
+      height: 100%;
+      gap: 24px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 16px;
     }
   }
 
@@ -108,14 +110,16 @@ text-align: left;
     max-width: 200px;
     position: relative;
     padding-left: 46px;
-    span{
+
+    span {
       font-family: OpenSans;
       color: black;
       font-weight: 900;
     }
   }
-  &__advantages-item--one{
-    &::after{
+
+  &__advantages-item--one {
+    &::after {
       content: '';
       position: absolute;
       top: 13px;
@@ -126,8 +130,8 @@ text-align: left;
     }
   }
 
-  &__advantages-item--two{
-    &::after{
+  &__advantages-item--two {
+    &::after {
       content: '';
       position: absolute;
       top: 13px;
@@ -138,8 +142,8 @@ text-align: left;
     }
   }
 
-    &__advantages-item--three{
-    &::after{
+  &__advantages-item--three {
+    &::after {
       content: '';
       position: absolute;
       top: 13px;
@@ -152,3 +156,111 @@ text-align: left;
 }
 
 //====================================================================================================
+
+.services {
+
+  /* .services__container */
+  @include adaptiveValue("padding-top", 120, 60);
+  @include adaptiveValue("padding-bottom", 120, 60);
+
+  &__container {}
+
+  /* .services__title */
+
+  &__title {
+    color: rgb(22, 21, 22);
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 38, 30);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /* .services__wrapp */
+
+  &__wrapp {}
+
+  /* .services__description */
+
+  &__description {
+    color: rgb(22, 21, 22);
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 24, 18);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 230px;
+    @include adaptiveValue("max-width", 230, 170);
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('@img/arow-down.svg');
+      width: 17px;
+      height: 9px;
+      right: -10px;
+      @include adaptiveValue("top", 10, 7);
+      z-index: 10;
+    }
+  }
+
+  /* .services__box */
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    border-top: 1px solid rgb(202, 200, 202);
+    @media (max-width: em(737)){
+        flex-direction: column;
+        gap: 15px;
+    }
+  }
+
+  /* .services__box-title */
+
+  &__box-title {
+    max-width: 400px;
+    flex: 1 0;
+    @media (max-width: em(737)){
+       text-align: center; 
+    }
+  }
+
+  /* .services__box-time */
+
+  &__box-time {}
+
+  /* .services__box-price */
+
+  &__box-price {}
+
+  /* .services__box-btn */
+
+  &__box-btn {
+    padding: 13px 34px;
+    border: 1px solid rgb(171, 12, 54);
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(171, 12, 54);
+    font-family: OpenSans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    transition: all 0.9s;
+
+    &:hover {
+      background-color: rgb(171, 12, 54);
+      color: white;
+    }
+  }
+}
