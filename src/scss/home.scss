@@ -396,3 +396,122 @@
 
   }
 }
+
+// ==========================================
+
+.stocks {
+
+  /* .stocks__container */
+  @include adaptiveValue("padding-top", 120, 60);
+
+  &__container {}
+
+  /* .stocks__title */
+
+  &__title {
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 38, 26);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 56px;
+    @include adaptiveValue("margin-bottom", 56, 28);
+  }
+
+  /* .stocks__wrapp */
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 25, 12);
+    @media (max-width: em(1416)){
+       flex-wrap: wrap;
+       justify-content: center; 
+    }
+  }
+    
+
+  &__item {
+    background-color: rgb(255, 245, 244);
+    text-align: center;
+    @include adaptiveValue("padding-bottom", 32, 16);
+    @include adaptiveValue("width", 456, 228);
+     @media (max-width: em(577)){
+        width: 100%;
+    }
+  }
+
+  /* .stocks__img */
+
+  &__img {
+    @include adaptiveValue("margin-bottom", 32, 16);
+    @include adaptiveValue("width", 456, 228);
+    @include adaptiveValue("height", 278, 139);
+    @media (max-width: em(577)){
+        width: 100%;
+        height: 100%;
+    }
+  }
+
+  /* .stocks__box */
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    @include adaptiveValue("margin-bottom", 26, 13);
+  }
+
+  /* .stocks__price */
+
+  &__price {
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 30, 18);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+  }
+
+  /* .stocks__oldprice */
+
+  &__oldprice {
+    text-decoration: line-through;
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 300;
+    line-height: 130%;
+    letter-spacing: 0%;
+  }
+
+  /* .stocks__item-title */
+
+  &__item-title {
+    color: rgb(22, 21, 22);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+  }
+
+  /* .stocks__item-description */
+
+  &__item-description {
+    font-size: 14px;
+    @include adaptiveValue("padding-left", 32, 16);
+    @include adaptiveValue("padding-right", 32, 16);
+    @include adaptiveValue("margin-bottom", 32, 16);
+  }
+
+  /* .stocks__btn */
+
+  &__btn {
+    @include adaptiveValue("border-radius", 50, 25);
+    background: rgb(171, 12, 54);
+    color: white;
+    padding: 13px 34px;
+  }
+}
