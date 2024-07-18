@@ -1,80 +1,130 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-        <section class="hero">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="hero">
         <div class="hero__container">
           <div class="hero__wrapp">
             <h1 class="hero__title">Вакуумно-микроигольчатый RF-лифтинг на аппарате INUS</h1>
-            <p class="hero__description">Краткое описание процедуры. Диаграммы связей и по сей день остаются уделом либералов, которые жаждут быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+            <p class="hero__description">Краткое описание процедуры. Диаграммы связей и по сей день остаются уделом
+              либералов, которые жаждут быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.
+            </p>
             <p class="hero__price">от 20000 ₽</p>
             <button class="hero__btn">Записаться</button>
           </div>
         </div>
         <div class="hero__advantages">
           <div class="hero__container hero__wrapper">
-            <div class="hero__advantages-item hero__advantages-item--one">Эффект наступит после <span>одного сеанса</span></div>
-            <div class="hero__advantages-item hero__advantages-item--two">Рекомендуется повторять <span>через 1-3 недели</span></div>
-            <div class="hero__advantages-item hero__advantages-item--three">Продолжительность эффекта <span>от 6 месяцев</span></div>
+            <div class="hero__advantages-item hero__advantages-item--one">Эффект наступит после <span>одного
+                сеанса</span></div>
+            <div class="hero__advantages-item hero__advantages-item--two">Рекомендуется повторять <span>через 1-3
+                недели</span></div>
+            <div class="hero__advantages-item hero__advantages-item--three">Продолжительность эффекта <span>от 6
+                месяцев</span></div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="services">
+        <div class="services__container">
+          <h2 class="services__title">Услуги</h2>
+          <div class="services__wrapp">
+            <h3 class="services__description">Отдельные зоны</h3>
+            <div class="services__box">
+              <p class="services__box-title">RF-lifting Лицо (без век)</p>
+              <p class="services__box-time">60 мин</p>
+              <p class="services__box-price">18000 ₽</p>
+              <button class="services__box-btn">Записаться</button>
+            </div>
+            <div class="services__box">
+              <p class="services__box-title">RF-lifting Лицо + Шея</p>
+              <p class="services__box-time">60 мин</p>
+              <p class="services__box-price">18000 ₽</p>
+              <button class="services__box-btn">Записаться</button>
+            </div>
+            <div class="services__box">
+              <p class="services__box-title">RF-lifting Inus Лицо + Шея + Декольте</p>
+              <p class="services__box-time">60 мин</p>
+              <p class="services__box-price">18000 ₽</p>
+              <button class="services__box-btn">Записаться</button>
+            </div>
+            <div class="services__box">
+              <p class="services__box-title">RF-lifting Inus Лицо + Веки +Шея</p>
+              <p class="services__box-time">60 мин</p>
+              <p class="services__box-price">18000 ₽</p>
+              <button class="services__box-btn">Записаться</button>
+            </div>
+            <div class="services__box">
+              <p class="services__box-title">RF-lifting Inus Волосистая часть головы внутренняя или внешняя поверхность
+                волосистая часть головы</p>
+              <p class="services__box-time">60 мин</p>
+              <p class="services__box-price">18000 ₽</p>
+              <button class="services__box-btn">Записаться</button>
+            </div>
+            <div class="services__box">
+              <p class="services__box-title">RF-lifting Inus Бедра (внутренняя или внешняя поверхность)</p>
+              <p class="services__box-time">60 мин</p>
+              <p class="services__box-price">18000 ₽</p>
+              <button class="services__box-btn">Записаться</button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="service-packages">
+        <div class="service-packages__container">
+          <h2 class="service-packages__title">Пакеты услуг</h2>
+          <div class="service-packages__wrapp">
+            <div class="service-packages__item">
+              <h3 class="service-packages__item-title">Омоложение лица</h3>
+              <p class="service-packages__item-description">3 процедуры при первичном обращении в клинику</p>
+              <p class="service-packages__item-price">5000 ₽</p>
+              <p class="service-packages__item-oldprice">6000 ₽</p>
+              <button class="service-packages__item-btn">Записаться</button>
+            </div>
+
+            <div class="service-packages__item">
+              <h3 class="service-packages__item-title">Омоложение лица</h3>
+              <p class="service-packages__item-description">3 процедуры при первичном обращении в клинику</p>
+              <p class="service-packages__item-price">5000 ₽</p>
+              <p class="service-packages__item-oldprice">6000 ₽</p>
+              <button class="service-packages__item-btn">Записаться</button>
+            </div>
+
+            <div class="service-packages__item">
+              <h3 class="service-packages__item-title">Омоложение лица</h3>
+              <p class="service-packages__item-description">3 процедуры при первичном обращении в клинику</p>
+              <p class="service-packages__item-price">5000 ₽</p>
+              <p class="service-packages__item-oldprice">6000 ₽</p>
+              <button class="service-packages__item-btn">Записаться</button>
+            </div>
+
+            <div class="service-packages__item">
+              <h3 class="service-packages__item-title">Омоложение лица</h3>
+              <p class="service-packages__item-description">3 процедуры при первичном обращении в клинику</p>
+              <p class="service-packages__item-price">5000 ₽</p>
+              <p class="service-packages__item-oldprice">6000 ₽</p>
+              <button class="service-packages__item-btn">Записаться</button>
             </div>
           </div>
+        </div>
+        <div class="service-packages__images">
+        
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  <!-- @@include('html/_popup.htm',{}) -->
+  @@include('html/_js.htm',{})
+</body>
 
-        </section>
-
-        <section class="services">
-          <div class="services__container">
-            <h2 class="services__title">Услуги</h2>
-            <div class="services__wrapp">
-              <h3 class="services__description">Отдельные зоны</h3>
-              <div class="services__box">
-                <p class="services__box-title">RF-lifting Лицо (без век)</p>
-                <p class="services__box-time">60 мин</p>
-                <p class="services__box-price">18000 ₽</p>
-                <button class="services__box-btn">Записаться</button>
-              </div>
-              <div class="services__box">
-                <p class="services__box-title">RF-lifting Лицо + Шея</p>
-                <p class="services__box-time">60 мин</p>
-                <p class="services__box-price">18000 ₽</p>
-                <button class="services__box-btn">Записаться</button>
-              </div>
-              <div class="services__box">
-                <p class="services__box-title">RF-lifting Inus Лицо + Шея + Декольте</p>
-                <p class="services__box-time">60 мин</p>
-                <p class="services__box-price">18000 ₽</p>
-                <button class="services__box-btn">Записаться</button>
-              </div>
-              <div class="services__box">
-                <p class="services__box-title">RF-lifting Inus Лицо + Веки +Шея</p>
-                <p class="services__box-time">60 мин</p>
-                <p class="services__box-price">18000 ₽</p>
-                <button class="services__box-btn">Записаться</button>
-              </div>
-              <div class="services__box">
-                <p class="services__box-title">RF-lifting Inus Волосистая часть головы внутренняя или внешняя поверхность волосистая часть головы</p>
-                <p class="services__box-time">60 мин</p>
-                <p class="services__box-price">18000 ₽</p>
-                <button class="services__box-btn">Записаться</button>
-              </div>
-              <div class="services__box">
-                <p class="services__box-title">RF-lifting Inus Бедра (внутренняя или внешняя поверхность)</p>
-                <p class="services__box-time">60 мин</p>
-                <p class="services__box-price">18000 ₽</p>
-                <button class="services__box-btn">Записаться</button>
-              </div>
-
-            </div>
-          </div>
-        </section>
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		<!-- @@include('html/_popup.htm',{}) -->
-		@@include('html/_js.htm',{})
-	</body>
 </html>

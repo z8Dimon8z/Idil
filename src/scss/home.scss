@@ -218,9 +218,10 @@
     padding-top: 33px;
     padding-bottom: 33px;
     border-top: 1px solid rgb(202, 200, 202);
-    @media (max-width: em(737)){
-        flex-direction: column;
-        gap: 15px;
+
+    @media (max-width: em(737)) {
+      flex-direction: column;
+      gap: 15px;
     }
   }
 
@@ -229,8 +230,9 @@
   &__box-title {
     max-width: 400px;
     flex: 1 0;
-    @media (max-width: em(737)){
-       text-align: center; 
+
+    @media (max-width: em(737)) {
+      text-align: center;
     }
   }
 
@@ -262,5 +264,135 @@
       background-color: rgb(171, 12, 54);
       color: white;
     }
+  }
+}
+
+// =================================================
+
+.service-packages {
+
+  /* .service-packages__container */
+  @include adaptiveValue("padding-top", 104, 52);
+  background-color: rgb(171, 12, 54);
+
+  &__container {}
+
+  /* .service-packages__title */
+
+  &__title {
+
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 38, 20);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  /* .service-packages__wrapp */
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 24, 12);
+    position: relative;
+    z-index: 3;
+    @include adaptiveValue("top", 100, 20);
+
+    @media (max-width: em(1194)) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  /* .service-packages__item */
+
+  &__item {
+    backdrop-filter: blur(40px);
+    background-color: rgb(255, 255, 255);
+    @include adaptiveValue("padding", 40, 20);
+    text-align: center;
+  }
+
+  /* .service-packages__item-title */
+
+  &__item-title {
+    color: rgb(22, 21, 22);
+    font-size: 24px;
+    @include adaptiveValue("font-size", 24, 18);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    @include adaptiveValue("margin-bottom", 17, 15);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translate(-50%);
+      height: 2px;
+      width: 120px;
+      background-color: rgb(171, 12, 54);
+    }
+  }
+
+  /* .service-packages__item-description */
+
+  &__item-description {
+    color: rgb(34, 32, 34);
+    font-family: OpenSans;
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 0%;
+    @include adaptiveValue("margin-bottom", 30, 15);
+  }
+
+  /* .service-packages__item-price */
+
+  &__item-price {
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 30, 16);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin-bottom: 4px;
+  }
+
+  /* .service-packages__item-oldprice */
+
+  &__item-oldprice {
+    color: rgb(34, 32, 34);
+    @include adaptiveValue("font-size", 16, 10);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-decoration: line-through;
+    @include adaptiveValue("margin-bottom", 30, 15);
+  }
+
+  /* .service-packages__item-btn */
+
+  &__item-btn {
+    @include adaptiveValue("border-radius", 50, 25);
+    background: rgb(171, 12, 54);
+    color: white;
+    padding: 13px 34px;
+  }
+
+  /* .service-packages__images */
+
+  &__images {
+    @include adaptiveValue("height", 570, 285);
+    width: 100%;
+    background-image: url('@img/service-packages-bg.jpeg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
   }
 }
