@@ -627,8 +627,9 @@
     align-items: center;
     justify-content: space-between;
     @include adaptiveValue("gap", 27, 13);
-    @media (max-width: em(965)){
-       flex-wrap: wrap; 
+
+    @media (max-width: em(965)) {
+      flex-wrap: wrap;
       justify-content: center;
     }
   }
@@ -671,3 +672,234 @@
 
   }
 }
+
+// ==================================
+
+.care {
+
+  /* .care__container */
+  @include adaptiveValue("padding-top", 120, 60);
+  @include adaptiveValue("padding-bottom", 120, 60);
+
+  &__container {}
+
+  /* .care__title */
+
+  &__title {
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 38, 22);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  /* .care__slider */
+
+  &__slider {}
+
+  /* .care__wrapper */
+
+  &__wrapper {
+    margin-bottom: 30px;
+  }
+
+  /* .care__slide */
+
+  &__slide {}
+
+  /* .care__slide-img */
+
+  &__slide-img {
+    margin-bottom: 24px;
+    @include adaptiveValue("width", 456, 228);
+    @include adaptiveValue("height", 350, 175);
+  }
+
+  /* .care__slide-description */
+
+  &__slide-description {
+    max-width: 250px;
+    color: rgb(22, 21, 22);
+    font-family: OpenSans;
+    font-size: 18px;
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+  }
+}
+
+// скрол
+.care__slider .swiper-scrollbar-drag {
+  background-color: #c50d0d;
+  cursor: pointer;
+}
+
+// ========================================
+
+.procedure {
+
+  /* .procedure__container */
+  @include adaptiveValue("padding-top", 104, 52);
+  @include adaptiveValue("padding-bottom", 104, 52);
+  background-image: url('@img/procedure-bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {}
+
+  /* .procedure__box */
+
+  &__box {
+    max-width: 696px;
+    @include adaptiveValue("padding", 60, 30);
+    backdrop-filter: blur(40px);
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  /* .procedure__box-title */
+
+  &__box-title {
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 38, 22);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+    @include adaptiveValue("margin-bottom", 24, 12);
+  }
+
+  /* .procedure__box-description */
+
+  &__box-description {
+    color: rgb(34, 32, 34);
+    font-family: Open Sans;
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    @include adaptiveValue("margin-bottom", 56, 28);
+  }
+
+  /* .procedure__box-btn */
+
+  &__box-btn {
+    @include adaptiveValue("border-radius", 50, 25);
+    background: rgb(171, 12, 54);
+    color: white;
+    padding: 13px 34px;
+  }
+}
+
+// ==========================
+.tasks {
+
+  /* .tasks__container */
+  @include adaptiveValue("padding-top", 104, 50);
+  @include adaptiveValue("padding-bottom", 104, 50);
+  /* светло-розовый */
+  background-color: rgb(255, 245, 244);
+
+  &__container {}
+
+  /* .tasks__wraper */
+
+  &__wraper {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 100, 20);
+  }
+  &__img{
+    @include adaptiveValue("width", 576,288);
+    @include adaptiveValue("height", 490, 245);
+    @media (max-width: em(842)){
+       display: none; 
+    }
+  }
+}
+
+
+
+.questions {
+
+  &__list {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__item {
+    @include adaptiveValue("margin-bottom", 10, 5);
+    width: 100%;
+  }
+
+  &__title {
+    position: relative;
+    width: 100%;
+    @include adaptiveValue("padding-top", 20, 10);
+    @include adaptiveValue("padding-bottom", 20, 10);
+    @include adaptiveValue("padding-left", 30, 15);
+    @include adaptiveValue("padding-right", 30, 15);
+    background-color: rgb(255, 245, 244);
+    text-align: left;
+    border: none;
+    font-weight: 400;
+    @include adaptiveValue("font-size", 22, 14);
+    line-height: 21px;
+    transition: all 0.3s;
+    border-bottom: 1px solid rgb(202, 200, 202);
+
+    &:hover {
+      color: red;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      @include adaptiveValue("right", 20, 10);
+      @include adaptiveValue("bottom", 26, 13);
+      @include adaptiveValue("width", 17, 9);
+      @include adaptiveValue("height", 17, 9);
+      border: 2px solid;
+      border-color: transparent #b80707 #cc0808 transparent;
+      transform: rotate(45deg);
+      transition: border-color 0.5s ease-in-out, bottom 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+      border-color: transparent #676767 #676767 transparent;
+    }
+
+    &.active:after {
+      border-color: #b80707 transparent transparent #b80707;
+      @include adaptiveValue(" bottom", 15, 8);
+    }
+
+  }
+
+  &__description {
+    margin-top: -2px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+
+    &.active {
+      height: auto;
+    }
+
+    p {
+      background-color: rgb(255, 245, 244);
+      @include adaptiveValue("padding-top", 5, 5);
+      @include adaptiveValue("padding-bottom", 5, 5);
+      @include adaptiveValue("padding-left", 30, 15);
+      @include adaptiveValue("padding-right", 30, 15);
+      font-weight: 400;
+      @include adaptiveValue("font-size", 18, 10);
+      line-height: 19px;
+      color: rgb(34, 32, 34);
+    }
+  }
+}
+// ====================================
