@@ -426,20 +426,22 @@
     align-items: center;
     justify-content: space-between;
     @include adaptiveValue("gap", 25, 12);
-    @media (max-width: em(1416)){
-       flex-wrap: wrap;
-       justify-content: center; 
+
+    @media (max-width: em(1416)) {
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
-    
+
 
   &__item {
     background-color: rgb(255, 245, 244);
     text-align: center;
     @include adaptiveValue("padding-bottom", 32, 16);
     @include adaptiveValue("width", 456, 228);
-     @media (max-width: em(577)){
-        width: 100%;
+
+    @media (max-width: em(577)) {
+      width: 100%;
     }
   }
 
@@ -449,9 +451,10 @@
     @include adaptiveValue("margin-bottom", 32, 16);
     @include adaptiveValue("width", 456, 228);
     @include adaptiveValue("height", 278, 139);
-    @media (max-width: em(577)){
-        width: 100%;
-        height: 100%;
+
+    @media (max-width: em(577)) {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -513,5 +516,158 @@
     background: rgb(171, 12, 54);
     color: white;
     padding: 13px 34px;
+  }
+}
+
+// ==================================
+.feedback {
+
+  /* .feedback__wrapp */
+
+  @include adaptiveValue("padding-top", 120, 60);
+
+  &__wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: em(895)) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  /* .feedback__img */
+
+  &__img {
+    @include adaptiveValue("width", 576, 288);
+    @include adaptiveValue("height", 542, 271);
+
+    @media (max-width: em(895)) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /* .feedback__box */
+
+  &__box {
+    background-color: rgb(255, 245, 244);
+    @include adaptiveValue("padding", 150, 25);
+    height: 676px;
+    @include adaptiveValue("height", 676, 338);
+    @include adaptiveValue(" margin-left", -50, 0);
+    position: relative;
+    z-index: -1;
+
+    @media (max-width: em(895)) {
+      text-align: center;
+      height: 100%;
+      margin-left: 0;
+    }
+  }
+
+  /* .feedback__title */
+
+  &__title {
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 38, 22);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    @include adaptiveValue("margin-bottom", 24, 12);
+  }
+
+  /* .feedback__description */
+
+  &__description {
+    color: rgb(34, 32, 34);
+    font-family: OpenSans;
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 0%;
+    @include adaptiveValue("margin-bottom", 57, 28);
+  }
+
+  /* .feedback__btn */
+
+  &__btn {
+    @include adaptiveValue("border-radius", 50, 25);
+    background: rgb(171, 12, 54);
+    color: white;
+    padding: 13px 34px;
+  }
+}
+
+// =====
+.advantages {
+
+  /* .advantages__container */
+  @include adaptiveValue("padding-top", 120, 60);
+
+  &__container {}
+
+  /* .advantages__title */
+
+  &__title {
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 38, 22);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 57, 28);
+  }
+
+  /* .advantages__wrapp */
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 27, 13);
+    @media (max-width: em(965)){
+       flex-wrap: wrap; 
+      justify-content: center;
+    }
+  }
+
+  /* .advantages__item */
+
+  &__item {
+    text-align: center;
+  }
+
+  /* .advantages__img */
+
+  &__img {
+
+    @include adaptiveValue("width", 88, 72);
+    @include adaptiveValue("height", 88, 72);
+    @include adaptiveValue("margin-bottom", 16, 8);
+  }
+
+  /* .advantages__item-title */
+
+  &__item-title {
+    @include adaptiveValue("margin-bottom", 10, 5);
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 20, 14);
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+  }
+
+  /* .advantages__item-description */
+
+  &__item-description {
+    color: rgb(22, 21, 22);
+    font-family: OpenSans;
+    @include adaptiveValue("font-size", 16, 12);
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 0%;
+
   }
 }
