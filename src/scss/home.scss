@@ -1076,6 +1076,7 @@
 
   /* .video-block__container */
   @include adaptiveValue("padding-top", 120, 60);
+  @include adaptiveValue("padding-bottom", 120, 60);
 
   &__container {}
 
@@ -1088,7 +1089,7 @@
     line-height: 120%;
     letter-spacing: 0%;
     text-align: center;
-    @include adaptiveValue("margin-bottom", 56,20);
+    @include adaptiveValue("margin-bottom", 56, 20);
   }
 
   /* .video-block__wrapp */
@@ -1162,3 +1163,78 @@
   height: 60px;
 }
 
+// ===========================
+.feedback-form {
+  /* светло-розовый */
+  background-color: rgb(255, 245, 244);
+  padding-top: 30px;
+
+  &__container {}
+
+  &__title {
+    color: rgb(22, 21, 22);
+    @include adaptiveValue("font-size", 38, 22);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 64px;
+  }
+
+  /* .feedback-form__wrapp */
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: em(1126)){
+       flex-direction: column;
+       justify-content: center;
+       gap: 20px; 
+    }
+  }
+
+  /* .feedback-form__form */
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .feedback-form__input */
+
+  &__input {
+font-family: Open Sans;
+max-width: 456px;
+font-size: 18px;
+font-weight: 300;
+line-height: 150%;
+letter-spacing: 0%;
+text-align: left;
+border-bottom: 1px solid rgb(202, 200, 202);
+margin-bottom: 40px;
+background-color: transparent;
+  }
+
+  /* .feedback-form__btn */
+
+  &__btn {
+    text-align: left;
+    @include adaptiveValue("border-radius", 50, 25);
+    background: rgb(171, 12, 54);
+    color: white;
+    padding: 13px 34px;
+    width: 212px;
+  }
+
+  /* .feedback-form__map */
+
+  &__map {}
+
+  /* .feedback-form__img */
+
+  &__img {
+    @include adaptiveValue("width", 730, 365);
+    @include adaptiveValue("height", 587, 294);
+  }
+}
