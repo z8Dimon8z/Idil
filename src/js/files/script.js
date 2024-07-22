@@ -4,6 +4,15 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 // Свой код пишем здесь
+
+import {
+  Fancybox
+} from "@fancyapps/ui";
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
 // акардеон
 const accordion = () => { //функция переключения акардион списка вопросов
   const characteristicsListElem = document.querySelector('.questions__list'); // получаем список вопросов
